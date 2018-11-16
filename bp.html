@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	<script src="galleria/galleria-1.5.7.js"></script>
+	<link rel="stylesheet" type="text/css" href="galleria/themes/classic/galleria.classic.css" />
+	<script src="galleria/themes/classic/galleria.classic.js"></script>
+
+    
+    <link rel="stylesheet" href="css/index.css">
+    <title>Stroke</title>
+    <style>
+            .galleria{ max-width: 1300px; height: 190px; background: #000;
+                       margin-top:55px;padding-top:10px;
+            }
+        </style>
+  </head>
+  <body>
+        <!-- <div class="galleria">
+                <img src="photo/photo1.png">
+                <img src="photo/photo2.jpg">
+                <img src="photo/photo3.jpg">
+            </div>
+            <script>
+        (function() { 
+                Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+                Galleria.run('.galleria');
+            }());
+            </script> -->
+
+    <div id="wrapper" class="animate">
+        <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark">
+          <span class="navbar-toggler-icon leftmenutrigger"></span>
+          <a class="navbar-brand" href="#">LOGO</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav animate side-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Chart
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sankey.html">Sankey</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="bp.html">Tran_code</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="cost.html">Cost</a>
+              </li>
+            </ul>
+            <!-- 上方navbar,暫時用不到 -->
+            <!-- <ul class="navbar-nav ml-md-auto d-md-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Top Menu Items</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul> -->
+          </div>
+        </nav>
+        
+        <!-- <script>
+          $(document).ready(function(){
+          $("#btn_bp1").click(function(){
+                  $("#bp1").show('fast');
+          });
+          $("#btn_bp2").click(function(){
+                  $("#bp2").show('fast');
+          });
+          $("#btn_bp3").click(function(){
+                  $("#bp3").show('fast');
+          });
+
+        });
+        </script> -->
+        <div class="container-fluid">
+            <div class="row">
+              <!-- <div class="col-2">
+                <div class="card"style="height:900px;">
+                  <div class="card-body" >
+                    <div class="submit-wrapper">
+                      <a  id="btn_bp1">第一次</a>   
+                    </div>  
+                    <div class="submit-wrapper">
+                        <a id="btn_bp2">第二次</a>   
+                    </div>    
+                    <div class="submit-wrapper">
+                        <a id="btn_bp3">第三次</a>   
+                    </div>                                 
+                  </div>
+                </div>
+              </div> -->
+                <div class="col-12">
+                  <div class="card">
+                      <div class="card-body"></div>
+                        <section class=" ">
+                          <div class="container">
+                            <div class="row">
+                              <div class="col-md-12 text-center ">
+                                <nav class="nav-justified ">
+                                  <div class="nav nav-tabs nav-tabs--vertical nav-tabs--left" id="nav-tab" role="navigation">
+                                    <a class="nav-item nav-link active" id="pop1-tab" data-toggle="tab" href="#pop1" role="tab" aria-controls="pop1" aria-selected="true">First Hospitalization</a>
+                                    <a class="nav-item nav-link" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab" aria-controls="pop2" aria-selected="false">Second Hospitalization</a>
+                                    <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">Third Hospitalization</a>
+                                                            
+                                  </div>
+                                </nav>
+                                  <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="pop1" role="tabpanel" aria-labelledby="pop1-tab">
+                                      
+                                      <div id="bp1"></div> 
+                                    </div>
+                                    <div class="tab-pane fade" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
+                                                              
+                                       <div id="bp2"></div> 
+                                    </div>
+                                    <div class="tab-pane fade" id="pop3" role="tabpanel" aria-labelledby="pop3-tab">
+                                        
+                                        <div id="bp3"></div> 
+                                    </div>
+                                  </div>
+                              </div>
+                            </div>
+                          </div>
+                        </section>
+                  </div>
+                </div>
+              </div>
+          </div>
+                
+          
+        </div>
+      </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="http://vizjs.org/viz.v1.3.0.min.js"></script>
+    <script src="http://vizjs.org/viz.v1.1.0.min.js"></script>
+    <script src= "js/index.js"></script>
+    <script src="js/bp.js"></script>
+    <script src="js/bp_1.js"></script>
+    <script src="js/bp_2.js"></script>
+    <script src="js/bp_3.js"></script>
+  </body>
+</html>

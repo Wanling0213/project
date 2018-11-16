@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+	<script src="galleria/galleria-1.5.7.js"></script>
+	<link rel="stylesheet" type="text/css" href="galleria/themes/classic/galleria.classic.css" />
+	<script src="galleria/themes/classic/galleria.classic.js"></script>
+
+    
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/cost.css">
+    <title>Stroke</title>
+    <style>
+            .galleria{ max-width: 1300px; height: 190px; background: #000;
+                       margin-top:55px;padding-top:10px;
+            }
+        </style>
+  </head>
+  <body>
+        <div class="galleria">
+                <img src="photo/photo1.png">
+                <img src="photo/photo2.jpg">
+                <img src="photo/photo3.jpg">
+            </div>
+            <script>
+        (function() { 
+                Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+                Galleria.run('.galleria');
+            }());
+            </script>
+
+    <div id="wrapper" class="animate">
+        <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark">
+          <span class="navbar-toggler-icon leftmenutrigger"></span>
+          <a class="navbar-brand" href="#">LOGO</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav animate side-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Chart
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="sankey.html">Sankey</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="bp.html">Tran_code</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="cost.html">Cost</a>
+            </li>
+            </ul>
+            <!-- 上方navbar,暫時用不到 -->
+            <!-- <ul class="navbar-nav ml-md-auto d-md-flex">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Top Menu Items</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul> -->
+          </div>
+        </nav>
+        
+        <div class="container-fluid">
+          <div class="row">
+            <!-- <div class="col-3">
+              <div class="card">
+                <div class="card-body">
+                  <div class="container">
+                    <button class="btn btn-1" id="btnIs">缺血性中風</button><br>
+                    <button class="btn btn-1" id="btnsICH">顱內出血</button><br>
+                    <button class="btn btn-1" id="btnSAH">蜘蛛網膜出血</button><br>
+                  </div>           
+                </div>
+              </div>
+            </div> -->
+            <div class="col-4">
+              <div class="card">
+                <div class="card-body">
+                  <div id="chartIs" style="height: 350px; width: 100%;"></div>
+                  <button class="btn invisible" id="backButtonIs">< Back</button>
+                  
+                </div>
+                                    
+              </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div id="chartsICH" style="height: 350px; width: 100%;"></div>
+                    <button class="btn invisible" id="backButtonsICH">< Back</button>                   
+                  </div>                                     
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="card">
+                  <div class="card-body">
+                    <div id="chartSAH" style="height: 350px; width: 100%;"></div>
+                    <button class="btn invisible" id="backButtonSAH">< Back</button>                   
+                  </div>                                     
+                </div>
+            </div>
+          </div>
+        </div>
+                
+        
+                 
+        </div>
+      </div>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/cost/cost.js"></script>
+    <script src="js/cost/costIs.js"></script>
+    <script src="js/cost/costsICH.js"></script>
+    <script src="js/cost/costSAH.js"></script>
+  </body>
+</html>

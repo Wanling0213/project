@@ -1,0 +1,88 @@
+
+text{
+	font-size:12px;
+}
+.mainBars rect{
+  shape-rendering: auto;
+  fill-opacity: 0;
+  stroke-width: 0.5px;
+  stroke: rgb(0, 0, 0);
+  stroke-opacity: 0;
+}
+.subBars{
+	shape-rendering:crispEdges;
+}
+.edges{
+	stroke:none;
+	fill-opacity:0.5;
+}
+.header{
+	text-anchor:middle;
+	font-size:16px;
+}
+line{
+	stroke:grey;
+}
+
+
+.submit-wrapper {
+    margin-top:200px;
+    margin-bottom:20px;
+}
+.submit-wrapper a {
+    border:2px solid #f33;
+    color:#000;
+    padding:20px 25px;
+    text-decoration:none;
+    position:relative;
+    letter-spacing:8px;
+    transition:all 0.6s;
+    z-index:1;
+}
+.submit-wrapper a:before,
+.submit-wrapper a:after {
+    content:"";
+    position:absolute;
+    top:50%;
+    left:0;
+    width:24px;
+    height:4px;
+    background:#f33;
+    margin-left:-12px;
+    margin-top:-2px;
+    transition:all 0.6s;
+}
+.submit-wrapper a:after {
+    left:auto;
+    right:0;
+    margin-right:-12px;
+}
+.submit-wrapper a:hover:before,
+.submit-wrapper a:hover:after {
+    width:100%;
+    transition:all 0.6s;
+    background:#fff;
+    transform:scaleY(5);
+    z-index:-1;
+}
+.submit-wrapper a:hover {
+    text-decoration:none;
+    background:#f33;
+    transition:all 0.6s;
+    color:#f33;
+}
+
+ 
+.svg-wrapper:hover .shape {
+    -webkit-animation: 0.5s draw linear forwards;
+    animation: 0.5s draw linear forwards;
+}
+  .svg-wrapper {
+    height: 60px;
+      margin: 0 auto;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 320px;
+}
+  

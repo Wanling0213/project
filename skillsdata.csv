@@ -1,0 +1,30 @@
+id,value,color
+Time,
+Time.First,
+Time.First.Start,0,#808080
+Time.First.Male,
+Time.First.Male.Other,3.5,#0678BE
+Time.First.Male.Die,0.2,#808080
+Time.First.Male.Stroke Again,1.3,#00A0D2
+Time.First.Female,
+Time.First.Female.Other,3.3,#EB2C2F
+Time.First.Female.Die,0.5,#808080
+Time.First.Female.Stroke Again,1.2,#00A0D2
+Time.Second,
+Time.Second.Male,
+Time.Second.Male.Other,3.0,#0678BE
+Time.Second.Male.Die,0.4,#808080
+Time.Second.Male.Stroke Again,1.6,#00A0D2
+Time.Second.Female,
+Time.Second.Female.Other,3.15,#EB2C2F
+Time.Second.Female.Die,0.4,#808080
+Time.Second.Female.Stroke Again,1.81,#00A0D2
+Time.Third,
+Time.Third.Male,
+Time.Third.Male.Other,2.87,#0678BE
+Time.Third.Male.Die,0.35,#808080
+Time.Third.Male.Stroke Again,1.78,#00A0D2
+Time.Third.Female,
+Time.Third.Female.Other,3,#EB2C2F
+Time.Third.Female.Die,0.4,#808080
+Time.Third.Female.Stroke Again,1.7,#00A0D2
