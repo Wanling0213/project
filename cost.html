@@ -20,23 +20,29 @@
     <link rel="stylesheet" href="css/cost.css">
     <title>Stroke</title>
     <style>
-            .galleria{ max-width: 1300px; height: 190px; background: #000;
+            .galleria{ max-width: 1300px; height: 300px; background: #000;
                        margin-top:55px;padding-top:10px;
             }
         </style>
   </head>
   <body>
-        <div class="galleria">
-                <img src="photo/photo1.png">
-                <img src="photo/photo2.jpg">
-                <img src="photo/photo3.jpg">
-            </div>
-            <script>
-        (function() { 
-                Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
-                Galleria.run('.galleria');
-            }());
-            </script>
+    <div class="galleria">
+      <a href="https://www.youtube.com/watch?v=PwwuVZORiMc"><img src="photo/stroke.jpg"></a>
+      <img src="photo/photo2.jpg">
+      <img src="photo/photo3.jpg">
+    </div>
+    <script>
+  (function() { 
+        Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+        Galleria.run('.galleria');
+        $('.galleria').galleria({ 
+        extend: function() { 
+        this.play(2500); // will advance every 4th second 
+        } 
+    }); 
+    }());
+    
+    </script>
 
     <div id="wrapper" class="animate">
         <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark">
@@ -61,7 +67,10 @@
               </li>
               <li class="nav-item">
                   <a class="nav-link" href="cost.html">Cost</a>
-            </li>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="tree.html">Tree</a>
+              </li>
             </ul>
             <!-- 上方navbar,暫時用不到 -->
             <!-- <ul class="navbar-nav ml-md-auto d-md-flex">
