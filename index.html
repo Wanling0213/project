@@ -11,165 +11,136 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-	<script src="galleria/galleria-1.5.7.js"></script>
-	<link rel="stylesheet" type="text/css" href="galleria/themes/classic/galleria.classic.css" />
-	<script src="galleria/themes/classic/galleria.classic.js"></script>
+	  <script src="galleria/galleria-1.5.7.js"></script>
+	  <link rel="stylesheet" type="text/css" href="galleria/themes/classic/galleria.classic.css" />
+	  <script src="galleria/themes/classic/galleria.classic.js"></script>
 
-    
     <link rel="stylesheet" href="css/index.css">
     <title>Stroke</title>
     <style>
             .galleria{ max-width: 100%; height: 300px; background: #000;
-                       margin-top:55px;padding-top:10px;
-            }
-        </style>
+                       margin-top:55px;padding-top:10px;}
+            a { color: #666666; } /* CSS link color */ /*here*/          
+    </style>
   </head>
   <body>
-        <div class="galleria">
-                <a href="https://www.youtube.com/watch?v=PwwuVZORiMc"><img src="photo/stroke.jpg"></a>
-                <img src="photo/photo2.jpg">
-                <img src="photo/photo3.jpg">
-            </div>
-            <script>
-        (function() { 
-                Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
-                Galleria.run('.galleria');
-                $('.galleria').galleria({ 
+    <div class="galleria">
+      <a href="https://www.youtube.com/watch?v=PwwuVZORiMc"><img src="photo/stroke.jpg"></a>
+      <img src="photo/photo2.jpg">
+      <img src="photo/photo3.jpg">
+    </div>
+    <script>
+      (function() { 
+        Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+        Galleria.run('.galleria');
+        $('.galleria').galleria({ 
                 extend: function() { 
                 this.play(2500); // will advance every 4th second 
-                } 
-            }); 
-            }());
-            </script>
-        
-
+        }}); 
+      }());
+    </script>
     <div id="wrapper" class="animate">
-        <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark">
-          <span class="navbar-toggler-icon leftmenutrigger"></span>
-          <a class="navbar-brand" href="#">LOGO</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav animate side-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Chart
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sankey.html">Sankey</a>
-              </li>
-              <li class="nav-item">
-                    <a class="nav-link" href="bp.html">Tran_code</a>
-              </li>
-              <li class="nav-item">
-                    <a class="nav-link" href="cost.html">Cost</a>
-              </li>
-            </ul>
-            <!-- 上方navbar,暫時用不到 -->
-            <!-- <ul class="navbar-nav ml-md-auto d-md-flex">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Top Menu Items</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-            </ul> -->
-          </div>
-        </nav>
-        
-        <div class="container-fluid">
+      <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark " style="background-color: #CCB38C;">
+        <span class="navbar-toggler-icon leftmenutrigger"></span>
+        <a class="navbar-brand" href="#">關於中風 - 中風類別分析</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav animate side-nav" style="background-color: #F5DEB3; text-shadow: 0.1px 0.1px #CC6600; color: #FFB366;">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">中風類別分析
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sankey.html">轉移軌跡圖</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bp.html">住院轉移圖</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cost.html">醫療花費</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tree.html">樹狀分析圖</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 col-xs-12 col-sm-12">
+            <div class="card">
+              <div class="card-body">
                 <div class="row">
-                    <div class="col-md-12 col-xs-12 col-sm-12">
-                          <div class="card">
-                            <div class="card-body">
-                              <div class="row">
-                                <!-- 排版用的 -->
-                                <div class="col-md-1"></div>
-                                <div class="col-md-11">
-                                  <div id='dashboard'>
-                                  </div>
-                                </div>
-                              </div>
+                  <!-- 排版用的 -->
+                  <div class="col-md-1"></div>
+                    <div class="col-md-11">
+                  <div id='dashboard'></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-100"></div>
+        <div class="col-md-12 col-xs-12 col-sm-12">
+          <div class="card">
+            <div class="card-body"></div>
+            <section class=" ">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12 text-center  ">
+                    <nav class="nav-justified ">
+                      <div class="nav nav-tabs " id="nav-tab" role="tablist">
+                        <a class="nav-item nav-link active" id="pop1-tab" data-toggle="tab" href="#pop1" role="tab" aria-controls="pop1" aria-selected="true">缺血性腦中風</a>
+                        <a class="nav-item nav-link" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab" aria-controls="pop2" aria-selected="false">顱內出血</a>
+                        <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">蜘蛛網膜出血</a>
+                      </div>
+                    </nav>
+                    <div class="tab-content" id="nav-tabContent">
+                      <div class="tab-pane fade show active" id="pop1" role="tabpanel" aria-labelledby="pop1-tab">
+                        <div class="pt-3"></div>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-3"><strong>缺血性腦中風</strong><img src="https://d2tkpp75ij92p5.cloudfront.net/uploads/2018/08/ischemic-types-of-stroke.jpg" style="width:295px;height:300px;"/></div>
+                            <div class="col-9">
+                              <div id ="LineChart_Is"style="height: 300px; width: 100%;"></div>
                             </div>
                           </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
+                        <div class="pt-3"></div>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-3"><strong>顱內出血</strong><img src="https://media.gettyimages.com/illustrations/hemorrhagic-stroke-illustration-id924977692" style="width:295px;height:300px;"/></div>
+                            <div class="col-9">
+                              <div id ="LineChart_sICH"style="height: 300px; width: 100%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="tab-pane fade" id="pop3" role="tabpanel" aria-labelledby="pop3-tab">
+                        <div class="pt-3"></div>
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-3"><strong>蜘蛛網膜出血</strong><img src="https://www.rnpedia.com/wp-content/uploads/2015/01/icp.jpg" style="width:295px;height:270px;"/></div>
+                            <div class="col-9">
+                              <div id ="LineChart_SAH"style="height: 300px; width: 100%;"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
-                    <div class="w-100"></div>
-                    <div class="col-md-12 col-xs-12 col-sm-12">
-                            <div class="card">
-                                    <div class="card-body"></div>
-                                      <section class=" ">
-                                            <div class="container">
-                                                <div class="row">
-                                                    <div class="col-md-12 text-center  ">
-                                                        <nav class="nav-justified ">
-                                                          <div class="nav nav-tabs " id="nav-tab" role="tablist">
-                                                            <a class="nav-item nav-link active" id="pop1-tab" data-toggle="tab" href="#pop1" role="tab" aria-controls="pop1" aria-selected="true">缺血性腦中風</a>
-                                                            <a class="nav-item nav-link" id="pop2-tab" data-toggle="tab" href="#pop2" role="tab" aria-controls="pop2" aria-selected="false">顱內出血</a>
-                                                            <a class="nav-item nav-link" id="pop3-tab" data-toggle="tab" href="#pop3" role="tab" aria-controls="pop3" aria-selected="false">蜘蛛網膜出血</a>
-                                                            
-                                                          </div>
-                                                        </nav>
-                                                        <div class="tab-content" id="nav-tabContent">
-                                                          <div class="tab-pane fade show active" id="pop1" role="tabpanel" aria-labelledby="pop1-tab">
-                                                                <div class="pt-3"></div>
-                                                                <div class="container">
-                                                                  <div class="row">
-                                                                    <div class="col-3"><strong>缺血性腦中風</strong><img src="https://d2tkpp75ij92p5.cloudfront.net/uploads/2018/08/ischemic-types-of-stroke.jpg" style="width:295px;height:300px;"/></div>
-                                                                    <div class="col-9">
-                                                                        <div id ="LineChart_Is"style="height: 300px; width: 100%;"></div>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                                
-                                                                
-                                                              </div>
-                                                          <div class="tab-pane fade" id="pop2" role="tabpanel" aria-labelledby="pop2-tab">
-                                                               <div class="pt-3"></div>
-                                                               <div class="container">
-                                                                  <div class="row">
-                                                                    <div class="col-3"><strong>顱內出血</strong><img src="https://media.gettyimages.com/illustrations/hemorrhagic-stroke-illustration-id924977692" style="width:295px;height:300px;"/></div>
-                                                                    <div class="col-9">
-                                                                        <div id ="LineChart_sICH"style="height: 300px; width: 100%;"></div>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                              
-                                                          </div>
-                                                          <div class="tab-pane fade" id="pop3" role="tabpanel" aria-labelledby="pop3-tab">
-                                                               <div class="pt-3"></div>
-                                                               
-                                                               <div class="container">
-                                                                  <div class="row">
-                                                                    <div class="col-3"><strong>蜘蛛網膜出血</strong><img src="https://www.rnpedia.com/wp-content/uploads/2015/01/icp.jpg" style="width:295px;height:270px;"/></div>
-                                                                    <div class="col-9">
-                                                                        <div id ="LineChart_SAH"style="height: 300px; width: 100%;"></div>
-                                                                    </div>
-                                                                  </div>
-                                                                </div>
-                                                              
-                                                          </div>
-                                                          
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </section>
-                                    </div>
-                                  </div>
-                    </div>
+                  </div>
                 </div>
-                
-          
+              </div>
+            </section>
+          </div>
         </div>
       </div>
+    </div> 
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <!-- Optional JavaScript -->
@@ -181,5 +152,18 @@
     <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
     <script src="http://d3js.org/d3.v3.min.js"></script>
     <script src="js/index.js"></script>
+
+    <footer style="background-color: #FFB366">
+      <div style="text-align:center;height:100px">
+        <!--<img src="photo/DSLAB.png" style="width:100px;height:100px;"/>-->
+        <span style="font-size:14px;font-weight:bold;color:#666666;">Copyright© 2018 Dept. of Computer Science & Engineering, Yuan Ze University<br>
+          Contact information:
+          <a href="mailto:miao@dslab.cse.yzu.edu.tw">Mei-Lien, Lee</a> ◆
+          <a href="mailto:Wang@dslab.cse.yzu.edu.tw">Wang-Ling, Wu</a>
+        </span>
+        <p style="color:#666666;font-size:14px;">
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

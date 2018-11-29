@@ -11,19 +11,18 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
     
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
-	<script src="galleria/galleria-1.5.7.js"></script>
-	<link rel="stylesheet" type="text/css" href="galleria/themes/classic/galleria.classic.css" />
-	<script src="galleria/themes/classic/galleria.classic.js"></script>
+	  <script src="galleria/galleria-1.5.7.js"></script>
+	  <link rel="stylesheet" type="text/css" href="galleria/themes/classic/galleria.classic.css" />
+	  <script src="galleria/themes/classic/galleria.classic.js"></script>
 
-    
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/cost.css">
     <title>Stroke</title>
     <style>
             .galleria{ max-width: 1300px; height: 300px; background: #000;
-                       margin-top:55px;padding-top:10px;
-            }
-        </style>
+                       margin-top:55px;padding-top:10px;}
+            a { color: #666666; } /* CSS link color */ /*here*/ 
+    </style>
   </head>
   <body>
     <div class="galleria">
@@ -32,109 +31,86 @@
       <img src="photo/photo3.jpg">
     </div>
     <script>
-  (function() { 
+      (function() { 
         Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
         Galleria.run('.galleria');
         $('.galleria').galleria({ 
         extend: function() { 
         this.play(2500); // will advance every 4th second 
-        } 
-    }); 
-    }());
-    
+        }}); 
+      }());
     </script>
-
     <div id="wrapper" class="animate">
-        <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark">
-          <span class="navbar-toggler-icon leftmenutrigger"></span>
-          <a class="navbar-brand" href="#">LOGO</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav animate side-nav">
-              <li class="nav-item">
-                <a class="nav-link" href="index.html">Chart
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="sankey.html">Sankey</a>
-              </li>
-              <li class="nav-item">
-                    <a class="nav-link" href="bp.html">Tran_code</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="cost.html">Cost</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="tree.html">Tree</a>
-              </li>
-            </ul>
-            <!-- 上方navbar,暫時用不到 -->
-            <!-- <ul class="navbar-nav ml-md-auto d-md-flex">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Top Menu Items</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-            </ul> -->
-          </div>
+      <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark" style="background-color: #CCB38C;">
+        <span class="navbar-toggler-icon leftmenutrigger"></span>
+        <a class="navbar-brand" href="#">關於中風 - 醫療花費</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav animate side-nav" style="background-color: #F5DEB3; text-shadow: 0.1px 0.1px #CC6600; color: #FFB366;">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">中風類別分析
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sankey.html">轉移軌跡圖</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bp.html">住院轉移圖</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cost.html">醫療花費</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tree.html">樹狀分析圖</a>
+            </li>
+          </ul>
+        </div>
         </nav>
-        
         <div class="container-fluid">
           <div class="row">
-            <!-- <div class="col-3">
-              <div class="card">
-                <div class="card-body">
-                  <div class="container">
-                    <button class="btn btn-1" id="btnIs">缺血性中風</button><br>
-                    <button class="btn btn-1" id="btnsICH">顱內出血</button><br>
-                    <button class="btn btn-1" id="btnSAH">蜘蛛網膜出血</button><br>
-                  </div>           
-                </div>
-              </div>
-            </div> -->
             <div class="col-4">
               <div class="card">
                 <div class="card-body">
                   <div id="chartIs" style="height: 350px; width: 100%;"></div>
                   <button class="btn invisible" id="backButtonIs">< Back</button>
-                  
-                </div>
-                                    
+                </div>                    
               </div>
             </div>
             <div class="col-4">
-                <div class="card">
-                  <div class="card-body">
-                    <div id="chartsICH" style="height: 350px; width: 100%;"></div>
-                    <button class="btn invisible" id="backButtonsICH">< Back</button>                   
-                  </div>                                     
-                </div>
+              <div class="card">
+                <div class="card-body">
+                  <div id="chartsICH" style="height: 350px; width: 100%;"></div>
+                  <button class="btn invisible" id="backButtonsICH">< Back</button>                   
+                </div>                                     
+              </div>
             </div>
             <div class="col-4">
-                <div class="card">
-                  <div class="card-body">
-                    <div id="chartSAH" style="height: 350px; width: 100%;"></div>
-                    <button class="btn invisible" id="backButtonSAH">< Back</button>                   
-                  </div>                                     
-                </div>
+              <div class="card">
+                <div class="card-body">
+                  <div id="chartSAH" style="height: 350px; width: 100%;"></div>
+                  <button class="btn invisible" id="backButtonSAH">< Back</button>                   
+                </div>                                     
+              </div>
             </div>
           </div>
-        </div>
-                
-        
-                 
-        </div>
+        </div>          
       </div>
+    </div>
+    <!-- <div class="col-3">
+            <div class="card">
+              <div class="card-body">
+                <div class="container">
+                  <button class="btn btn-1" id="btnIs">缺血性中風</button><br>
+                  <button class="btn btn-1" id="btnsICH">顱內出血</button><br>
+                  <button class="btn btn-1" id="btnSAH">蜘蛛網膜出血</button><br>
+                </div>           
+              </div>
+            </div>
+          </div> -->
+
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 
     <!-- Optional JavaScript -->
@@ -149,5 +125,18 @@
     <script src="js/cost/costIs.js"></script>
     <script src="js/cost/costsICH.js"></script>
     <script src="js/cost/costSAH.js"></script>
+
+    <footer style="background-color: #FFB366">
+        <div style="text-align:center;height:100px">
+          <!--<img src="photo/DSLAB.png" style="width:100px;height:100px;"/>-->
+          <span style="font-size:14px;font-weight:bold;color:#666666;">Copyright© 2018 Dept. of Computer Science & Engineering, Yuan Ze University<br>
+            Contact information:
+            <a href="mailto:miao@dslab.cse.yzu.edu.tw">Mei-Lien, Lee</a> ◆
+            <a href="mailto:Wang@dslab.cse.yzu.edu.tw">Wang-Ling, Wu</a>
+          </span>
+          <p style="color:#666666;font-size:14px;">
+          </p>
+        </div>
+      </footer>
   </body>
 </html>

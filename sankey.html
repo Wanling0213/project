@@ -20,129 +20,303 @@
     <link rel="stylesheet" href="css/bp.css">
     <title>Stroke</title>
     <style>
-            .galleria{ max-width: 1300px; height: 180px; background: #000;
-                       margin-top:55px;padding-top:10px;
-            }
-        </style>
-  </head>
-  <body>
-        <div class="galleria ">
-                <img src="photo/photo1.png">
-                <img src="photo/photo2.jpg">
-                <img src="photo/photo3.jpg">
-            </div>
-            <script>
-        (function() { 
-                Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
-                Galleria.run('.galleria');
-            }());
-            </script>
-
+      .galleria{ max-width: 100%; height: 300px; background: #000;
+                 margin-top:55px;padding-top:10px;}
+      a { color: #666666; } /* CSS link color */ /*here*/  
+	  
+  </style>
+  <style>
+    .node rect {
+      cursor: move;
+      fill-opacity: .9;
+      shape-rendering: crispEdges;
+    }
+     
+    .node text {
+      pointer-events: none;
+      font-family: Helvetica;
+      font-size: 12px;
+    }
+    </style>
+</head>
+<body>
+  <div class="galleria">
+          <a href="https://www.youtube.com/watch?v=PwwuVZORiMc"><img src="photo/stroke.jpg"></a>
+          <img src="photo/photo2.jpg">
+          <img src="photo/photo3.jpg">
+      </div>
+      <script>
+  (function() { 
+          Galleria.loadTheme('galleria/themes/classic/galleria.classic.min.js');
+          Galleria.run('.galleria');
+          $('.galleria').galleria({ 
+          extend: function() { 
+          this.play(2500); // will advance every 4th second 
+          } 
+      }); 
+      }());
+    </script>
     <div id="wrapper" class="animate">
-        <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark">
-          <span class="navbar-toggler-icon leftmenutrigger"></span>
-          <a class="navbar-brand" href="#">LOGO</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-            aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-              <ul class="navbar-nav animate side-nav">
-                  <li class="nav-item">
-                    <a class="nav-link" href="index.html">Chart
-                      <span class="sr-only">(current)</span>
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="sankey.html">Sankey</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="bp.html">Tran_code</a>
-                  </li>
-                  <li class="nav-item">
-                      <a class="nav-link" href="cost.html">Cost</a>
-                </li>
-                </ul>
-            <!-- 上方navbar,暫時用不到 -->
-            <!-- <ul class="navbar-nav ml-md-auto d-md-flex">
-              <li class="nav-item">
-                <a class="nav-link" href="#">Home
-                  <span class="sr-only">(current)</span>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Top Menu Items</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Pricing</a>
-              </li>
-            </ul> -->
+      <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark " style="background-color: #CCB38C;">
+        <span class="navbar-toggler-icon leftmenutrigger"></span>
+        <a class="navbar-brand" href="#">關於中風 - 轉移軌跡圖</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav animate side-nav" style="background-color: #F5DEB3; text-shadow: 0.1px 0.1px #CC6600; color: #FFB366;">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">中風類別分析
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sankey.html">轉移軌跡圖</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="bp.html">住院轉移圖</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="cost.html">醫療花費</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="tree.html">樹狀分析圖</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <style>@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);</style>
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="card">
+              <div class="card-body">
+                <div class="container">
+                  <div class="row">
+                    <div class="col-2">
+                      <img src="photo/male.png" style="width:200px;border:0px;padding-bottom:30px;"/>
+                      <button id ="male" style="font-size:60px;background-color:#5599FF ;color:white; font-family: cwTeXYen, sans-serif;" >
+                        男生
+                      </button>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-6">    
+                      <div id="male_traj" style="display:none;"></div>
+                      <div id="female_traj" style="display:none;"></div>
+                    </div>
+                    <div class="col-1"></div>
+                    <div class="col-2">
+                      <img src="photo/female.png" style="width:200px; border:0px;padding-bottom:30px;"/>
+                      <button id ="female" style="font-size:60px;background-color:#FF8888 ;color:white;font-family: cwTeXYen, sans-serif;" >
+                        女生
+                      </button>
+                    </div>                                  
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="card-body">
+                <div class="container">
+                  <div class = "row">
+                    <div class="col-2">
+                      <img src="photo/flow-chart.png" style="width:150px; border:0px;"/>
+                    </div>
+                    <div class="col-10">
+                      <div id='chart'></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
-        </nav>
-        <style>@import url(https://fonts.googleapis.com/earlyaccess/cwtexyen.css);</style>
-        <div class="container-fluid">
-                <div class="row">
-                        <div class="col">
-                          <div class="card">
-                            <div class="card-body">
-                               <div class="container">
-                                 <div class="row">
-                                    <div class="col-2">
-                                      <img src="photo/male.png" style="width:200px;border:0px;padding-bottom:30px;"/>
-                                        <button id ="male" style="font-size:60px;background-color:#4285f4 ;color:white; font-family: cwTeXYen, sans-serif;" >
-                                            男生
-                                        </button></div>
-                                    <div class="col-1"></div>
-                                    <div class="col-6">    
-                                        <div id="male_traj" style="display:none;"></div>
-                                        <div id="female_traj" style="display:none;"></div>
-                                        
-                                    </div>
-                                    <div class="col-1"></div>
-                                    <div class="col-2">
-                                        <img src="photo/female.png" style="width:200px; border:0px;padding-bottom:30px;"/>
-                                        <button id ="female" style="font-size:60px;background-color:#F06292 ;color:white;font-family: cwTeXYen, sans-serif;" >
-                                            女生
-                                        </button>
-                                    </div>                                  
-                                </div>
-                                
-                              </div>
-                            </div>
-                          </div>
-                          <div class="card">
-                            <div class="card-body">
-                              <div class="container">
-                                <div class = "row">
-                                  <div class="col-2">
-                                      <img src="photo/flow-chart.png" style="width:150px; border:0px;"/>
-                                  </div>
-                                  <div class="col-10">
-                                    <svg id= canvas></svg>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-
-
-          
         </div>
       </div>
+    </div>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
-
+    <script>
+      $( document ).ready(function() {
+      $('.leftmenutrigger').on('click', function(e) {
+      $('.side-nav').toggleClass("open");
+      $('#wrapper').toggleClass("open");
+      e.preventDefault();
+    });
+    });
+      
+    
+    </script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
-    <script src="https://canvasjs.com/assets/script/jquery-1.11.1.min.js"></script>
-    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
-    <script src="https://d3js.org/d3.v4.min.js"></script>
-    <script src="https://unpkg.com/d3-sankey@0.7"></script>
-    <script src="js/index.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/d3/4.4.0/d3.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.19.0/babel.min.js'></script>
     <script src="js/sankey.js"></script>
+    <script src="js/d3.sankey.js"></script>
+    <script lang='babel' type='text/babel'>
+      const units = '';
+      const margin = {top: 10, right: 10, bottom: 10, left: 10};
+      const width = 960 - margin.left - margin.right;
+      const height = 300 - margin.top - margin.bottom;
+      
+      // zero decimal places
+      const formatNumber = d3.format(',.0f');
+      
+      const format = d => `${formatNumber(d)} ${units}`;
+      
+      const color = d3.scaleOrdinal()
+      .domain([
+          '1_High','2_High','3_High','4_High',
+          '1_Med','2_Med','3_Med','4_Med',
+          '1_Low','2_Low','3_Low','4_Low'
+        ])
+        .range([
+          '#FF4E50','#D24858', '#EA8676','#F5254E',
+          '#FC6B0A','#F8872E', '#FFA927','#FDCA49',
+          '#94D583','#A4E179', '#CBF591','#E5F5AB',
+        ]);
+      
+      d3.select('#chart')
+        .style('visibility', 'visible');
+      
+      // append the svg canvas to the page
+      const svg = d3.select('#chart').append('svg')
+        .attr('width', width + margin.left + margin.right)
+        .attr('height', height + margin.top + margin.bottom)
+        .append('g')
+          .attr('transform', `translate(${margin.left},${margin.top})`);
+      
+      // set the sankey diagram properties
+      const sankey = d3.sankey()
+        .nodeWidth(12)
+        .nodePadding(10)
+        .size([width, height]);
+      
+      const path = sankey.link();
+      
+      // append a defs (for definition) element to your SVG
+      const defs = svg.append('defs');
+      
+      // load the data
+      d3.json('data.json', (error, graph) => {
+        console.log('graph', graph);
+        sankey
+          .nodes(graph.nodes)
+          .links(graph.links)
+          .layout(10); // any value > 13 breaks the link gradient
+       
+        // add in the links
+        const link = svg.append('g').selectAll('.link')
+          .data(graph.links)
+          .enter().append('path')
+            .attr('class', 'link')
+            .attr('d', path)
+            .style('stroke-width', d => Math.max(1, d.dy))
+            .style('fill', 'none')
+            .style('stroke-opacity', 0.18)
+            .sort((a, b) => b.dy - a.dy)
+            .on('mouseover', function() {
+              d3.select(this).style('stroke-opacity', 0.5);
+            })
+            .on('mouseout', function() {
+              d3.select(this).style('stroke-opacity', 0.2);
+            });
+      // add the link titles
+      link.append('title')
+          .text(d => `${d.source.name} → ${d.target.name}\n${format(d.value)}`);
+       
+        // add in the nodes
+        const node = svg.append('g').selectAll('.node')
+          .data(graph.nodes)
+          .enter().append('g')
+            .attr('class', 'node')
+            .attr('transform', d => `translate(${d.x},${d.y})`)
+            .call(d3.drag()
+              .subject(d => d)
+              .on('start', function() { 
+                this.parentNode.appendChild(this); })
+              .on('drag', dragmove));
+       
+        // add the rectangles for the nodes
+        node.append('rect')
+          .attr('height', d => d.dy)
+          .attr('width', sankey.nodeWidth())
+          .style('fill', d => { 
+            if(color.domain().indexOf(d.name) > -1){
+              return d.color = color(d.name);  
+            } else {
+              return d.color = '#ccc';
+            }
+          })
+          .append('title')
+            .text(d => `${d.name}\n${format(d.value)}`);
+      // add in the title for the nodes
+      node.append('text')
+          .attr('x', -6)
+          .attr('y', d => d.dy / 2)
+          .attr('dy', '.35em')
+          .attr('text-anchor', 'end')
+          .attr('transform', null)
+          .text(d => d.name)
+          .filter(d => d.x < width / 2)
+            .attr('x', 6 + sankey.nodeWidth())
+            .attr('text-anchor', 'start');
+      
+        // add gradient to links
+        link.style('stroke', (d, i) => {
+          console.log('d from gradient stroke func', d);
+      
+          // make unique gradient ids  
+          const gradientID = `gradient${i}`;
+      
+          const startColor = d.source.color;
+          const stopColor = d.target.color;
+      
+          console.log('startColor', startColor);
+          console.log('stopColor', stopColor);
+      
+          const linearGradient = defs.append('linearGradient')
+              .attr('id', gradientID);
+      
+          linearGradient.selectAll('stop') 
+            .data([                             
+                {offset: '10%', color: startColor },      
+                {offset: '90%', color: stopColor }    
+              ])                  
+            .enter().append('stop')
+            .attr('offset', d => {
+              console.log('d.offset', d.offset);
+              return d.offset; 
+            })   
+            .attr('stop-color', d => {
+              console.log('d.color', d.color);
+              return d.color;
+            });
+      
+          return `url(#${gradientID})`;
+        })
+       
+      // the function for moving the nodes
+        function dragmove(d) {
+          d3.select(this).attr('transform', 
+            `translate(${d.x = Math.max(0, Math.min(width - d.dx, d3.event.x))},${d.y = Math.max(0, Math.min(height - d.dy, d3.event.y))})`);
+          sankey.relayout();
+          link.attr('d', path);
+        }
+      });
+      </script>
+	  <footer style="background-color: #FFB366">
+      <div style="text-align:center;height:100px">
+        <!--<img src="photo/DSLAB.png" style="width:100px;height:100px;"/>-->
+        <span style="font-size:14px;font-weight:bold;color:#666666;">Copyright© 2018 Dept. of Computer Science & Engineering, Yuan Ze University<br>
+          Contact information:
+          <a href="mailto:miao@dslab.cse.yzu.edu.tw">Mei-Lien, Lee</a> ◆
+          <a href="mailto:Wang@dslab.cse.yzu.edu.tw">Wang-Ling, Wu</a>
+        </span>
+        <p style="color:#666666;font-size:14px;">
+        </p>
+      </div>
+    </footer>
   </body>
 </html>

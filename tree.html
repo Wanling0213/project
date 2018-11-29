@@ -20,9 +20,7 @@
     <link rel="stylesheet" href="css/tree.css">
     <title>Stroke</title>
     <style>
-    .galleria{ max-width: 1300px; height: 190px; background: #000;
-        margin-top:55px;padding-top:10px;
-    }
+    a { color: #666666; } /* CSS link color */ /*here*/  
     .link {
         fill: none;
         stroke: #555;
@@ -74,28 +72,30 @@
   </head>
   <body>
     <div id="wrapper" class="animate">
-        <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark " style="background-color: #CCB38C;">
           <span class="navbar-toggler-icon leftmenutrigger"></span>
-          <a class="navbar-brand" href="#">LOGO</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
-            aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="#">關於中風 - 住院轉移圖</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav animate side-nav">
+            <ul class="navbar-nav animate side-nav" style="background-color: #F5DEB3; text-shadow: 0.1px 0.1px #CC6600; color: #FFB366;">
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Chart
+                <a class="nav-link" href="index.html">中風類別分析
                   <span class="sr-only">(current)</span>
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="sankey.html">Sankey</a>
+                <a class="nav-link" href="sankey.html">轉移軌跡圖</a>
               </li>
               <li class="nav-item">
-                    <a class="nav-link" href="bp.html">Tran_code</a>
+                    <a class="nav-link" href="bp.html">住院轉移圖</a>
               </li>
               <li class="nav-item">
-                    <a class="nav-link" href="cost.html">Cost</a>
+                    <a class="nav-link" href="cost.html">醫療花費</a>
+              </li>
+              <li class="nav-item">
+                    <a class="nav-link" href="tree.html">樹狀分析圖</a>
               </li>
             </ul>
           </div>
@@ -128,6 +128,18 @@
     <script src="js/index.js"></script>
     <script src="js/tree.js"></script>
     <script src="https://d3js.org/d3.v4.min.js"></script>
+	<footer style="background-color: #FFB366">
+        <div style="text-align:center;height:100px">
+          <!--<img src="photo/DSLAB.png" style="width:100px;height:100px;"/>-->
+          <span style="font-size:14px;font-weight:bold;color:#666666;">Copyright© 2018 Dept. of Computer Science & Engineering, Yuan Ze University<br>
+            Contact information:
+            <a href="mailto:miao@dslab.cse.yzu.edu.tw">Mei-Lien, Lee</a> ◆
+            <a href="mailto:Wang@dslab.cse.yzu.edu.tw">Wang-Ling, Wu</a>
+          </span>
+          <p style="color:#666666;font-size:14px;">
+          </p>
+        </div>
+      </footer>
   </body>
 </html>
 <script>

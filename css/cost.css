@@ -3,7 +3,7 @@
 	padding: 8px;
 	border: none;
 	font-size: 16px;
-	background-color: #2eacd1;
+	background-color: #FFBB66;/*here*/
 	color: white;
 	position: absolute;
 	top: 10px;
@@ -15,7 +15,7 @@
 	padding: 8px;
 	border: none;
 	font-size: 16px;
-	background-color: #2eacd1;
+	background-color: #FFBB66;
 	color: white;
 	position: absolute;
 	top: 10px;
@@ -27,7 +27,7 @@
 	padding: 8px;
 	border: none;
 	font-size: 16px;
-	background-color: #2eacd1;
+	background-color: #FFBB66;
 	color: white;
 	position: absolute;
 	top: 10px;
@@ -63,7 +63,7 @@
     border-radius: 10px;
    }
    .btn:hover {
-    background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 51%, #a1c4fd 100%);
+    background-image: linear-gradient(to right, #FFB7DD 0%, #CCBBFF 51%, #CCEEFF 100%);/*here*/
   }
   
   .btn-1 {

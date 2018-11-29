@@ -48,14 +48,15 @@ var data=[
         ['group6','其他',784,670]
         // group6 end
     ];
-    var color ={group1:"#3366CC", group2:"#DC3912",  group3:"#FF9900", group4:"#109618", group5:"#990099", group6:"#0099C6"};
+    var color_B ={group1:"#AA0000", group2:"#EE7700",  group3:"#FFCC22", group4:"#008800", group5:"#0044BB", group6:"#7700BB"};
+    var color_G ={group1:"#FF88C2", group2:"#FFAA33",  group3:"#FFDD55", group4:"#66DD00", group5:"#77DDFF", group6:"#5599FF"};
     var svg = d3.select("#bp2").append("svg").attr("width", 960).attr("height", 800);
     
     svg.append("text").attr("x",250).attr("y",50)
-      .attr("class","header").text("Male");
+      .attr("class","header").text("男生");
       
     svg.append("text").attr("x",750).attr("y",50)
-      .attr("class","header").text("Female");
+      .attr("class","header").text("女生");
     
     var g =[svg.append("g").attr("transform","translate(150,100)")
         ,svg.append("g").attr("transform","translate(650,100)")];
@@ -67,7 +68,7 @@ var data=[
         .height(600)
         .width(200)
         .barSize(35)
-        .fill(d=>color[d.primary])		
+        .fill(d=>color_B[d.primary])		
       ,viz.bP()
         .data(data)
         .value(d=>d[3])
@@ -76,14 +77,14 @@ var data=[
         .height(600)
         .width(200)
         .barSize(35)
-        .fill(d=>color[d.primary])
+        .fill(d=>color_G[d.primary])
     ];
         
     [0,1].forEach(function(i){
       g[i].call(bp[i])
       
-      g[i].append("text").attr("x",-50).attr("y",-8).style("text-anchor","middle").text("Channel");
-      g[i].append("text").attr("x", 250).attr("y",-8).style("text-anchor","middle").text("State");
+      g[i].append("text").attr("x",-50).attr("y",-8).style("text-anchor","middle").text("年齡");
+      g[i].append("text").attr("x", 250).attr("y",-8).style("text-anchor","middle").text("歸轉結果");
       
       g[i].append("line").attr("x1",-100).attr("x2",0);
       g[i].append("line").attr("x1",200).attr("x2",300);
